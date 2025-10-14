@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main() {
+    int num1, num2;
+    int sum, difference, product;
+    float quotient;
+
+    // Input two numbers
+    printf("Enter first number: ");
+    scanf("%d", &num1);
+
+    printf("Enter second number: ");
+    scanf("%d", &num2);
+
+    // Arithmetic operations
+    sum = num1 + num2;
+    difference = num1 - num2;
+    product = num1 * num2;
+
+    // Avoid division by zero
+    if (num2 != 0) {
+        quotient = (float) num1 / num2;
+    } else {
+        printf("Error: Division by zero is not allowed.\n");
+        return 1;
+    }
+
+    // Output results
+    printf("\nSum = %d\n", sum);
+    printf("Difference = %d\n", difference);
+    printf("Product = %d\n", product);
+    printf("Quotient = %.2f\n", quotient);
+
+    return 0;
+}
